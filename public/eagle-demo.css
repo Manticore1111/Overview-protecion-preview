@@ -1,0 +1,37 @@
+:root{
+  --bg:#0b0b0b;
+  --panel:#141414;
+  --muted:#9aa3ab;
+  --gold:#d4af37;
+  --white:#e9e9e9;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:var(--white)}
+.gh-header{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;border-bottom:1px solid rgba(212,175,55,0.06);background:linear-gradient(180deg,rgba(255,255,255,0.02), transparent)}
+.gh-left{display:flex;align-items:center;gap:12px}
+.gh-logo{height:44px}
+.gh-title{font-weight:700;color:var(--white);letter-spacing:0.4px}
+.gh-center{flex:1;display:flex;justify-content:center}
+.gh-search{width:420px;max-width:60%;padding:8px 12px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:#121212;color:var(--white)}
+.gh-right{display:flex;align-items:center;gap:16px}
+.gh-right nav a{color:var(--muted);margin:0 8px;text-decoration:none}
+.gh-actions{display:flex;gap:8px;align-items:center}
+.btn{display:inline-block;padding:8px 12px;border-radius:6px;text-decoration:none;font-weight:600}
+.btn.primary{background:var(--gold);color:#07110a}
+.btn.ghost{border:1px solid rgba(255,255,255,0.06);color:var(--white);background:transparent}
+
+.demo-main{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1100px;margin:48px auto;padding:0 24px;align-items:center}
+.left-panel{display:flex;align-items:center;justify-content:center}
+.hero-image{width:100%;max-width:520px;height:auto;filter:drop-shadow(0 12px 24px rgba(0,0,0,0.6))}
+.right-panel{display:flex;align-items:center;justify-content:center}
+.card{width:100%;max-width:520px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(212,175,55,0.06);padding:28px;box-shadow:0 30px 80px rgba(0,0,0,0.6)}
+.card h2{color:var(--gold);font-size:22px;margin:0 0 10px}
+.card p{color:var(--muted);line-height:1.5}
+.card-cta{display:flex;gap:12px;margin-top:18px}
+
+@media(max-width:900px){
+  .demo-main{grid-template-columns:1fr;padding:24px}
+  .left-panel{order:2}
+  .right-panel{order:1}
+  .gh-search{display:none}
+}

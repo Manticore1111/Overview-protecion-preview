@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f0f0f;
+  --foreground: #e0e0e0;
+  --surface: rgba(40, 40, 40, 0.85);
+  --surface-strong: rgba(55, 55, 55, 0.95);
+  --line: rgba(212, 175, 55, 0.2);
+  --accent: #d4af37;
+  --accent-strong: #c9a227;
+  --accent-soft: rgba(212, 175, 55, 0.2);
+  --secondary: #8a8a8a;
+  --secondary-soft: rgba(138, 138, 138, 0.15);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-soft: var(--secondary-soft);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  background-image:
+    radial-gradient(circle at 14% 12%, rgba(212, 175, 55, 0.08), transparent 24%),
+    radial-gradient(circle at 86% 14%, rgba(212, 175, 55, 0.045), transparent 20%),
+    radial-gradient(circle at 50% 100%, rgba(212, 175, 55, 0.04), transparent 28%),
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.028), transparent 24%),
+    linear-gradient(180deg, #161616 0%, #0f0f0f 42%, #090909 100%);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  inset: auto;
+  pointer-events: none;
+  filter: blur(130px);
+  opacity: 0.18;
+}
+
+body::before {
+  top: -4rem;
+  left: 50%;
+  width: 28rem;
+  height: 14rem;
+  transform: translateX(-50%);
+  background: rgba(212, 175, 55, 0.09);
+}
+
+body::after {
+  right: auto;
+  bottom: -8rem;
+  left: 50%;
+  width: 30rem;
+  height: 16rem;
+  transform: translateX(-50%);
+  background: rgba(201, 162, 39, 0.07);
+}
+
+body::selection {
+  background: rgba(212, 175, 55, 0.3);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.022) 0.6px, transparent 0.6px);
+  background-size: 18px 18px;
+  opacity: 0.14;
+}
+
+.panel {
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.panel-strong {
+  background: rgba(55, 55, 55, 0.92);
+  backdrop-filter: blur(22px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.4);
+}
+
+.display-font {
+  font-family: var(--font-display), sans-serif;
+}
+
+.page-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.ambient-orb {
+  position: absolute;
+  z-index: -1;
+  border-radius: 9999px;
+  filter: blur(70px);
+  opacity: 0.42;
+}
+
+.ambient-orb-left {
+  left: -4rem;
+  top: 8rem;
+  width: 16rem;
+  height: 16rem;
+  background: rgba(212, 175, 55, 0.15);
+}
+
+.ambient-orb-right {
+  right: -3rem;
+  bottom: 6rem;
+  width: 18rem;
+  height: 18rem;
+  background: rgba(138, 138, 138, 0.1);
+}
+
+/* Utility to display an image with no scaling so the original file is shown at natural size */
+.full-image {
+  display: block;
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: none;
+}
+
+.ambient-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(16, 32, 51, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 32, 51, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 85%);
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(34px) scale(0.985);
+  filter: blur(10px);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.18);
+  transition:
+    opacity 700ms ease,
+    transform 700ms ease,
+    filter 700ms ease,
+    box-shadow 700ms ease;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  box-shadow: inherit;
+}
