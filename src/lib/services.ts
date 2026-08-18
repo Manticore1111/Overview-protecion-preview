@@ -8,6 +8,7 @@ export type Service = {
   image: string;
   detailTitle: string;
   detailIntro: string;
+  highlights: string[];
   detailParagraphs: string[];
 };
 
@@ -22,6 +23,11 @@ export const services: Service[] = [
     image: "/Object%20beveiliging.png",
     detailTitle: "Objectbeveiliging met continue waakzaamheid en betrouwbaarheid.",
     detailIntro: "Bescherming van objecten vraagt om overzicht, discipline en een aanpak die dag en nacht betrouwbaar blijft.",
+    highlights: [
+      "Toegangscontrole voor gebouwen, terreinen en bezoekers.",
+      "Preventieve surveillancerondes en alert toezicht op locatie.",
+      "Heldere rapportage en directe opvolging bij bijzonderheden.",
+    ],
     detailParagraphs: [
       "In een wereld waar veiligheid steeds belangrijker wordt, biedt objectbeveiliging een onmisbare bescherming voor uw eigendommen, personeel en bezoekers. Bij Overview Protection begrijpen we dat ieder object uniek is en vraagt om een beveiligingsaanpak op maat. Daarom zorgen onze ervaren beveiligingsprofessionals voor continue waakzaamheid en betrouwbaarheid, 24 uur per dag en 7 dagen per week.",
       "Objectbeveiliging richt zich op het beschermen van gebouwen, terreinen en andere eigendommen tegen risico’s zoals inbraak, vandalisme en onbevoegde toegang. Onze goed opgeleide beveiligers zijn alert, daadkrachtig en weten snel te handelen in het geval van een incident. Daarbij combineren wij menselijk inzicht met moderne technieken om een veilige en vertrouwde omgeving te creëren.",
@@ -39,6 +45,11 @@ export const services: Service[] = [
     image: "/winkel%20suilviance.png",
     detailTitle: "Winkelsurveillance met rust, overzicht en preventie.",
     detailIntro: "Voor winkels draait goede beveiliging om preventie, klantvriendelijkheid en een omgeving waarin personeel en bezoekers zich veilig voelen.",
+    highlights: [
+      "Zichtbare aanwezigheid die preventief werkt op de winkelvloer.",
+      "Vroegtijdig signaleren van diefstal, fraude en onrust.",
+      "Ondersteuning van personeel met een gastvrije benadering.",
+    ],
     detailParagraphs: [
       "Veiligheid en klanttevredenheid zijn onmisbaar voor het succes van iedere winkel. Bij Overview Protection bieden wij professionele winkelsurveillance die niet alleen gericht is op het voorkomen van diefstal en vandalisme, maar ook bijdraagt aan een prettige en veilige winkelervaring. Onze ervaren beveiligers zijn zichtbaar aanwezig, signaleren risico’s vroegtijdig en zorgen ervoor dat klanten en medewerkers zich beschermd voelen.",
       "Winkelsurveillance draait om meer dan toezicht houden. Onze beveiligers combineren preventieve aanwezigheid met observatie, detectie en discreet optreden bij incidenten. Ze ondersteunen het winkelpersoneel bij lastige situaties, grijpen daadkrachtig in bij diefstal of fraude en rapporteren bevindingen met advies om de veiligheid structureel te verbeteren.",
@@ -55,6 +66,11 @@ export const services: Service[] = [
     image: "/evenementen%20beveiliging.png",
     detailTitle: "Evenementenbeveiliging met focus op veiligheid en beleving.",
     detailIntro: "Voor festivals, congressen, sportwedstrijden en privé-evenementen draait goede beveiliging om veiligheid, rust en professionele begeleiding.",
+    highlights: [
+      "Toegangscontrole en een veilige ontvangst van bezoekers.",
+      "Publieksbegeleiding en overzicht tijdens drukke momenten.",
+      "Professionele ondersteuning bij incidenten en calamiteiten.",
+    ],
     detailParagraphs: [
       "Een geslaagd evenement begint met een veilige en ontspannen sfeer. Bij Overview Protection zorgen wij voor deskundige evenementbeveiliging, zodat gasten, medewerkers en artiesten zorgeloos kunnen genieten. Of het nu gaat om een festival, congres, sportwedstrijd of privéfeest: onze ervaren beveiligers creëren de omstandigheden waarin alles vlekkeloos en veilig verloopt.",
       "Evenementbeveiliging draait om het beschermen van bezoekers, deelnemers en eigendommen, terwijl er tegelijkertijd een prettige en gastvrije sfeer wordt behouden. Dit vraagt om scherpte, ervaring en uitstekende communicatieve vaardigheden. Onze beveiligers zijn speciaal getraind om professioneel en klantvriendelijk op te treden, zelfs in dynamische en drukke situaties.",
@@ -72,6 +88,11 @@ export const services: Service[] = [
     image: "/horeca%20beveiliging.png",
     detailTitle: "Horecabeveiliging met bescherming en service in balans.",
     detailIntro: "Voor restaurants, cafés, clubs en evenementenlocaties is een veilige omgeving onmisbaar om gastvrijheid en beleving te waarborgen.",
+    highlights: [
+      "Gastvrije toegangscontrole die past bij uw zaak.",
+      "Vroegtijdig herkennen en rustig beheersen van spanningen.",
+      "Zichtbaar toezicht zonder afbreuk te doen aan de sfeer.",
+    ],
     detailParagraphs: [
       "De horeca draait om sfeer, gastvrijheid en beleving. Om deze kernwaarden te waarborgen, is een veilige omgeving essentieel. Bij Overview Protection bieden wij professionele horecabeveiliging, zodat u zich volledig kunt richten op uw gasten terwijl wij zorgen voor rust, orde en veiligheid in uw zaak.",
       "Horecabeveiliging richt zich op het creëren van een prettige en veilige omgeving in restaurants, cafés, clubs en evenementenlocaties. Onze beveiligers zijn getraind in het herkennen en voorkomen van risicovolle situaties en combineren dit met een gastvrije en klantvriendelijke houding. Zo dragen zij niet alleen bij aan veiligheid, maar ook aan een positieve ervaring voor uw bezoekers.",
@@ -89,6 +110,11 @@ export const services: Service[] = [
     image: "/zorg%20beveiliging.png",
     detailTitle: "Zorgbeveiliging met menselijkheid en professioneel overzicht.",
     detailIntro: "In zorginstellingen moet beveiliging niet alleen veiligheid brengen, maar ook aansluiten op menselijkheid, rust en de dagelijkse zorgpraktijk.",
+    highlights: [
+      "Toegangsbeheer en preventief toezicht in een zorgomgeving.",
+      "Ondersteuning van zorgteams bij spanningen en crisissituaties.",
+      "Professioneel optreden met respect voor cliënten en bezoekers.",
+    ],
     detailParagraphs: [
       "Een veilige zorgomgeving is de basis voor goede zorg. Bij Overview Protection bieden wij gespecialiseerde zorgbeveiliging die rust, orde en veiligheid waarborgt voor patiënten, bezoekers en zorgprofessionals. Of het nu gaat om een ziekenhuis, GGZ-instelling, verpleeghuis of verslavingskliniek, onze ervaren beveiligers zorgen voor een omgeving waarin iedereen zich beschermd voelt.",
       "Zorgbeveiliging draait om het beschermen van mensen in kwetsbare situaties en het ondersteunen van zorgteams bij spanningen, agressie of crisissituaties. Dat vraagt niet alleen om alertheid en vakkennis, maar ook om sociale intelligentie, discretie en mensgericht handelen. Onze beveiligers zijn daarom getraind om met respect en professionaliteit te opereren binnen zorginstellingen.",

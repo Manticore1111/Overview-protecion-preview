@@ -3,13 +3,8 @@ import { NextResponse } from "next/server";
 
 import { CUSTOMER_SESSION_COOKIE } from "@/lib/customer-auth";
 
-function unauthorizedResponse() {
-  return new NextResponse("Auth required", {
-    status: 401,
-    headers: {
-      "WWW-Authenticate": 'Basic realm="Owner Area"',
-    },
-  });
+function unauthorizedResponse(request: NextRequest) {
+  return NextResponse.redirect(new URL("/", request.url));
 }
 
 export function proxy(request: NextRequest) {
@@ -28,7 +23,7 @@ export function proxy(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
 
   if (!authHeader?.startsWith("Basic ")) {
-    return unauthorizedResponse();
+    return unauthorizedResponse(request);
   }
 
   const credentials = Buffer.from(authHeader.slice(6), "base64").toString("utf8");
@@ -37,7 +32,7 @@ export function proxy(request: NextRequest) {
   const expectedPassword = process.env.OWNER_PASSWORD || "cerberus1";
 
   if (username !== expectedUsername || password !== expectedPassword) {
-    return unauthorizedResponse();
+    return unauthorizedResponse(request);
   }
 
   return NextResponse.next();

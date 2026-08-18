@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 
 import { SiteHeader } from "@/components/site-header";
 
@@ -32,6 +33,9 @@ export default function RootLayout({
       className={`${bodyFont.variable} ${displayFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col pt-32 lg:pt-36">
+        <Script id="disable-scroll-restoration" strategy="beforeInteractive">
+          {`if ("scrollRestoration" in history) { history.scrollRestoration = "manual"; }`}
+        </Script>
         <SiteHeader />
         {children}
       </body>
